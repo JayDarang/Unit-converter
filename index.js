@@ -4,6 +4,7 @@ const convertBtn = document.getElementById("convert-btn");
 const lengthEl = document.getElementById("length-el");
 const volEl = document.getElementById("vol-el");
 const massEl = document.getElementById("mass-el");
+const unitEl = document.getElementById("unit-el");
 
 // Conversion functions
 function convertLength(meters) {
@@ -24,6 +25,7 @@ function convertMass(kilograms) {
 // Event listener for convert button
 convertBtn.addEventListener("click", function () {
   const inputValue = parseFloat(inputEl.value);
+  unitEl.textContent = inputValue;
 
   if (!isNaN(inputValue)) {
     lengthEl.textContent = convertLength(inputValue);
